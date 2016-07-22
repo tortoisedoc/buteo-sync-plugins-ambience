@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<profile name="mystorageplugin" type="storage" >
+    <key name="enabled" value="true" />
+    <key name="mimetype" value="text/x-abx" />
+    <key name="mykey1" value="myvalue1" />
+    <key name="mykey2" value="myvalue2" />
+</profile>

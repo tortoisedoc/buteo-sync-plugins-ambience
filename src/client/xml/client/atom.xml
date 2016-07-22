@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<profile name="atom" type="client" > 
+    <key name="Sync Transport" value="HTTP" />
+    <key name="Sync Direction" value="one-way" />
+    <key name="conflictpolicy" value="server-wins" />
+    <key name="key1" value="value1" />
+    <key name="key2" value="value2" />
+    <key name="key3" value="value3" />
+</profile>

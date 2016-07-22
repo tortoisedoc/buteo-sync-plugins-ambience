@@ -1,0 +1,874 @@
+signal sender=org.freedesktop.DBus -> dest=:1.296 serial=2 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=NameAcquired
+   string ":1.296"
+method call sender=:1.296 -> dest=org.freedesktop.DBus serial=3 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "eavesdrop=true,type='method_call'"
+method call sender=:1.296 -> dest=org.freedesktop.DBus serial=4 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "eavesdrop=true,type='method_return'"
+method call sender=:1.296 -> dest=org.freedesktop.DBus serial=5 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "eavesdrop=true,type='error'"
+
+method call sender=:1.253 -> dest=com.jolla.ambienced serial=100 path=/com/jolla/ambienced; interface=com.jolla.ambienced; member=setAmbience
+   string "file:///home/nemo/Pictures/Camera/20160715_006.jpg"
+
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=374 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_pixel_ratio'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=375 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_rounds'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=376 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_rounds'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=377 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_radius'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=378 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_radius'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=379 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_sigma'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=380 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_sigma'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=381 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_pixel_ratio'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=382 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/meego/background/portrait/picture_filename'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=383 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6d 65 65 67 6f 2f 62 61 63 6b 67 72 6f 75 6e
+      64 2f 70 6f 72 74 72 61 69 74 2f 70 69 63 74 75 72 65 5f 66 69 6c 65 6e
+      61 6d 65 00 00 00 00 00 2f 68 6f 6d 65 2f 6e 65 6d 6f 2f 2e 6c 6f 63 61
+      6c 2f 73 68 61 72 65 2f 61 6d 62 69 65 6e 63 65 64 2f 77 61 6c 6c 70 61
+      70 65 72 73 2f 39 61 64 37 66 39 36 32 64 64 39 64 34 36 38 38 39 66 32
+      35 33 38 38 37 39 66 32 36 35 31 62 65 68 70 2e 6a 70 67 00 00 73 00 34
+      90
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=384 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/background/portrait/home_picture_filename'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=385 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 62 61 63 6b 67 72 6f 75 6e
+      64 2f 70 6f 72 74 72 61 69 74 2f 68 6f 6d 65 5f 70 69 63 74 75 72 65 5f
+      66 69 6c 65 6e 61 6d 65 00 00 00 00 00 00 00 00 2f 68 6f 6d 65 2f 6e 65
+      6d 6f 2f 2e 6c 6f 63 61 6c 2f 73 68 61 72 65 2f 61 6d 62 69 65 6e 63 65
+      64 2f 77 61 6c 6c 70 61 70 65 72 73 2f 39 61 64 37 66 39 36 32 64 64 39
+      64 34 36 38 38 39 66 32 35 33 38 38 37 39 66 32 36 35 31 62 65 68 70 2e
+      6a 70 67 00 00 73 00 39 98
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=386 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/background/portrait/app_picture_filename'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=387 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 62 61 63 6b 67 72 6f 75 6e
+      64 2f 70 6f 72 74 72 61 69 74 2f 61 70 70 5f 70 69 63 74 75 72 65 5f 66
+      69 6c 65 6e 61 6d 65 00 2f 68 6f 6d 65 2f 6e 65 6d 6f 2f 2e 63 61 63 68
+      65 2f 61 6d 62 69 65 6e 63 65 64 2f 63 6f 6d 2f 6a 6f 6c 6c 61 2f 63 6f
+      6d 70 6f 6e 65 6e 74 73 2f 62 67 69 6d 61 67 65 73 2f 39 31 66 65 64 62
+      65 61 70 2e 6a 70 67 00 00 73 00 38 84
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=388 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/highlight'"
+method return sender=:1.21 -> dest=:1.32 reply_serial=383
+   string ":1.21:user:141"
+signal sender=:1.21 -> dest=(null destination) serial=286 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/meego/background/portrait/picture_filename"
+   array [
+      string ""
+   ]
+   string ":1.21:user:141"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=389 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 74 68 65 6d 65 2f 63 6f 6c
+      6f 72 2f 68 69 67 68 6c 69 67 68 74 00 00 00 00 23 66 66 66 65 37 66 37
+      66 00 00 73 00 25 36
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=390 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/secondaryHighlight'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=391 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 74 68 65 6d 65 2f 63 6f 6c
+      6f 72 2f 73 65 63 6f 6e 64 61 72 79 48 69 67 68 6c 69 67 68 74 00 00 00
+      23 66 66 63 62 36 36 36 36 00 00 73 00 2e 3e
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=392 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/primary'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=393 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 74 68 65 6d 65 2f 63 6f 6c
+      6f 72 2f 70 72 69 6d 61 72 79 00 00 00 00 00 00 23 66 66 66 66 66 66 66
+      66 00 00 73 00 23 36
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=394 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/secondary'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=395 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 74 68 65 6d 65 2f 63 6f 6c
+      6f 72 2f 73 65 63 6f 6e 64 61 72 79 00 00 00 00 23 62 30 66 66 66 66 66
+      66 00 00 73 00 25 36
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=396 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/secondary'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=397 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/primary'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=398 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/secondaryHighlight'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=399 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/highlight'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=400 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/active_ambience'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=401 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 74 68 65 6d 65 2f 61 63 74
+      69 76 65 5f 61 6d 62 69 65 6e 63 65 00 00 00 00 2f 68 6f 6d 65 2f 6e 65
+      6d 6f 2f 2e 6c 6f 63 61 6c 2f 73 68 61 72 65 2f 61 6d 62 69 65 6e 63 65
+      64 2f 77 61 6c 6c 70 61 70 65 72 73 2f 39 61 64 37 66 39 36 32 64 64 39
+      64 34 36 38 38 39 66 32 35 33 38 38 37 39 66 32 36 35 31 62 65 68 70 2e
+      6a 70 67 00 00 73 00 25 80
+   ]
+method return sender=:1.21 -> dest=:1.32 reply_serial=385
+   string ":1.21:user:142"
+signal sender=:1.21 -> dest=(null destination) serial=288 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/background/portrait/home_picture_filename"
+   array [
+      string ""
+   ]
+   string ":1.21:user:142"
+method call sender=:1.30 -> dest=com.nokia.profiled serial=23 path=/com/nokia/profiled; interface=com.nokia.profiled; member=set_value
+   string "general"
+   string "ringing.alert.volume"
+   string "80"
+method return sender=:1.4 -> dest=:1.30 reply_serial=23
+   boolean true
+method call sender=:1.30 -> dest=com.nokia.profiled serial=24 path=/com/nokia/profiled; interface=com.nokia.profiled; member=set_profile
+   string "general"
+method return sender=:1.4 -> dest=:1.30 reply_serial=24
+   boolean true
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=402 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/lipstick-jolla-home/partnerspace/ambience'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=403 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6c 69 70 73 74 69 63 6b 2d 6a 6f 6c 6c 61 2d
+      68 6f 6d 65 2f 70 61 72 74 6e 65 72 73 70 61 63 65 2f 61 6d 62 69 65 6e
+      63 65 00 00 00 00 00 00 00 00 73 00 33 3d
+   ]
+method return sender=:1.21 -> dest=:1.32 reply_serial=387
+   string ":1.21:user:143"
+signal sender=:1.21 -> dest=(null destination) serial=290 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/background/portrait/app_picture_filename"
+   array [
+      string ""
+   ]
+   string ":1.21:user:143"
+method return sender=:1.21 -> dest=:1.32 reply_serial=389
+   string ":1.21:user:144"
+signal sender=:1.21 -> dest=(null destination) serial=292 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/theme/color/highlight"
+   array [
+      string ""
+   ]
+   string ":1.21:user:144"
+method return sender=:1.21 -> dest=:1.32 reply_serial=391
+   string ":1.21:user:145"
+signal sender=:1.21 -> dest=(null destination) serial=294 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/theme/color/secondaryHighlight"
+   array [
+      string ""
+   ]
+   string ":1.21:user:145"
+method return sender=:1.21 -> dest=:1.32 reply_serial=393
+   string ":1.21:user:146"
+signal sender=:1.21 -> dest=(null destination) serial=296 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/theme/color/primary"
+   array [
+      string ""
+   ]
+   string ":1.21:user:146"
+method return sender=:1.21 -> dest=:1.32 reply_serial=395
+   string ":1.21:user:147"
+signal sender=:1.21 -> dest=(null destination) serial=298 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/theme/color/secondary"
+   array [
+      string ""
+   ]
+   string ":1.21:user:147"
+method return sender=:1.21 -> dest=:1.32 reply_serial=401
+   string ":1.21:user:148"
+signal sender=:1.21 -> dest=(null destination) serial=300 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/theme/active_ambience"
+   array [
+      string ""
+   ]
+   string ":1.21:user:148"
+method return sender=:1.21 -> dest=:1.32 reply_serial=403
+   string ":1.21:user:149"
+method return sender=:1.34 -> dest=:1.253 reply_serial=100
+   int64 31
+signal sender=:1.21 -> dest=(null destination) serial=302 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/lipstick-jolla-home/partnerspace/ambience"
+   array [
+      string ""
+   ]
+   string ":1.21:user:149"
+signal sender=:1.4 -> dest=(null destination) serial=701 path=/com/nokia/profiled; interface=com.nokia.profiled; member=profile_changed
+   boolean false
+   boolean false
+   string "ambience"
+   array [
+      struct {
+         string "ringing.alert.volume"
+         string "80"
+         string "INTEGER 0-100"
+      }
+   ]
+signal sender=:1.4 -> dest=(null destination) serial=702 path=/com/nokia/profiled; interface=com.nokia.profiled; member=profile_changed
+   boolean false
+   boolean false
+   string "meeting"
+   array [
+      struct {
+         string "ringing.alert.volume"
+         string "80"
+         string "INTEGER 0-100"
+      }
+   ]
+signal sender=:1.4 -> dest=(null destination) serial=703 path=/com/nokia/profiled; interface=com.nokia.profiled; member=profile_changed
+   boolean false
+   boolean false
+   string "outdoors"
+   array [
+      struct {
+         string "ringing.alert.volume"
+         string "80"
+         string "INTEGER 0-100"
+      }
+   ]
+signal sender=:1.4 -> dest=(null destination) serial=704 path=/com/nokia/profiled; interface=com.nokia.profiled; member=profile_changed
+   boolean true
+   boolean true
+   string "general"
+   array [
+      struct {
+         string "calendar.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "calendar.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-calendar-alarm.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "clock.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "clock.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-alarm.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "clock.alert.volume"
+         string "100"
+         string "INTEGER 0-100"
+      }
+      struct {
+         string "email.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "email.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-emailtone.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "im.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "im.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-imtone.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "im_fg.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "im_fg.alert.tone"
+         string "/usr/share/sounds/jolla-ambient/stereo/jolla-related-message.wav"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "keypad.sound.level"
+         string "0"
+         string "INTEGER 0-2"
+      }
+      struct {
+         string "ringing.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "ringing.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-ringtone.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "ringing.alert.type"
+         string "Ringing"
+         string "STRING "Ringing" "Silent" "Beep""
+      }
+      struct {
+         string "ringing.alert.volume"
+         string "80"
+         string "INTEGER 0-100"
+      }
+      struct {
+         string "sms.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "sms.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-messagetone.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "sms_fg.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "sms_fg.alert.tone"
+         string "/usr/share/sounds/jolla-ambient/stereo/jolla-related-message.wav"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "system.sound.level"
+         string "1"
+         string "INTEGER 0-2"
+      }
+      struct {
+         string "touchscreen.sound.level"
+         string "1"
+         string "INTEGER 0-2"
+      }
+      struct {
+         string "touchscreen.vibration.level"
+         string "1"
+         string "INTEGER 0-2"
+      }
+      struct {
+         string "vibrating.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "voip.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "voip.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-ringtone.ogg"
+         string "SOUNDFILE"
+      }
+   ]
+method call sender=:1.282 -> dest=com.nokia.profiled serial=44 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.35 -> dest=com.nokia.profiled serial=70 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.46 -> dest=com.nokia.profiled serial=63 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.39 -> dest=com.nokia.profiled serial=52 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.2 -> dest=com.nokia.profiled serial=11 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_values
+   string "general"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=404 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/lipstick-jolla-home/partnerspace/ambience'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=405 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/active_ambience'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=406 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/background/portrait/app_picture_filename'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=407 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/background/portrait/home_picture_filename'"
+method call sender=:1.141 -> dest=com.nokia.profiled serial=71 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.37 -> dest=com.nokia.profiled serial=94 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=408 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/meego/background/portrait/picture_filename'"
+method return sender=:1.4 -> dest=:1.282 reply_serial=44
+   string "general"
+method return sender=:1.4 -> dest=:1.35 reply_serial=70
+   string "general"
+method return sender=:1.4 -> dest=:1.46 reply_serial=63
+   string "general"
+method return sender=:1.4 -> dest=:1.39 reply_serial=52
+   string "general"
+method return sender=:1.4 -> dest=:1.2 reply_serial=11
+   array [
+      struct {
+         string "calendar.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "calendar.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-calendar-alarm.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "clock.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "clock.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-alarm.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "clock.alert.volume"
+         string "100"
+         string "INTEGER 0-100"
+      }
+      struct {
+         string "email.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "email.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-emailtone.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "im.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "im.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-imtone.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "im_fg.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "im_fg.alert.tone"
+         string "/usr/share/sounds/jolla-ambient/stereo/jolla-related-message.wav"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "keypad.sound.level"
+         string "0"
+         string "INTEGER 0-2"
+      }
+      struct {
+         string "ringing.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "ringing.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-ringtone.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "ringing.alert.type"
+         string "Ringing"
+         string "STRING "Ringing" "Silent" "Beep""
+      }
+      struct {
+         string "ringing.alert.volume"
+         string "80"
+         string "INTEGER 0-100"
+      }
+      struct {
+         string "sms.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "sms.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-messagetone.ogg"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "sms_fg.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "sms_fg.alert.tone"
+         string "/usr/share/sounds/jolla-ambient/stereo/jolla-related-message.wav"
+         string "SOUNDFILE"
+      }
+      struct {
+         string "system.sound.level"
+         string "1"
+         string "INTEGER 0-2"
+      }
+      struct {
+         string "touchscreen.sound.level"
+         string "1"
+         string "INTEGER 0-2"
+      }
+      struct {
+         string "touchscreen.vibration.level"
+         string "1"
+         string "INTEGER 0-2"
+      }
+      struct {
+         string "vibrating.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "voip.alert.enabled"
+         string "On"
+         string "BOOLEAN"
+      }
+      struct {
+         string "voip.alert.tone"
+         string "/usr/share/sounds/jolla-ringtones/stereo/jolla-ringtone.ogg"
+         string "SOUNDFILE"
+      }
+   ]
+method return sender=:1.4 -> dest=:1.141 reply_serial=71
+   string "general"
+method return sender=:1.4 -> dest=:1.37 reply_serial=94
+   string "general"
+method call sender=:1.35 -> dest=com.nokia.profiled serial=71 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "vibrating.alert.enabled"
+method call sender=:1.39 -> dest=com.nokia.profiled serial=53 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "vibrating.alert.enabled"
+method call sender=:1.282 -> dest=com.nokia.profiled serial=45 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "vibrating.alert.enabled"
+method call sender=:1.46 -> dest=com.nokia.profiled serial=64 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "vibrating.alert.enabled"
+method call sender=:1.37 -> dest=com.nokia.profiled serial=95 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "vibrating.alert.enabled"
+method call sender=:1.141 -> dest=com.nokia.profiled serial=72 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "vibrating.alert.enabled"
+method return sender=:1.4 -> dest=:1.35 reply_serial=71
+   string "On"
+method return sender=:1.4 -> dest=:1.39 reply_serial=53
+   string "On"
+method return sender=:1.4 -> dest=:1.282 reply_serial=45
+   string "On"
+method return sender=:1.4 -> dest=:1.46 reply_serial=64
+   string "On"
+method return sender=:1.4 -> dest=:1.37 reply_serial=95
+   string "On"
+method return sender=:1.4 -> dest=:1.141 reply_serial=72
+   string "On"
+method call sender=:1.282 -> dest=com.nokia.profiled serial=46 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.46 -> dest=com.nokia.profiled serial=65 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.37 -> dest=com.nokia.profiled serial=96 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.141 -> dest=com.nokia.profiled serial=73 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.19 -> dest=com.nokia.profiled serial=497 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.35 -> dest=com.nokia.profiled serial=72 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method call sender=:1.39 -> dest=com.nokia.profiled serial=54 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method return sender=:1.4 -> dest=:1.282 reply_serial=46
+   string "general"
+method return sender=:1.4 -> dest=:1.46 reply_serial=65
+   string "general"
+method return sender=:1.4 -> dest=:1.37 reply_serial=96
+   string "general"
+method return sender=:1.4 -> dest=:1.141 reply_serial=73
+   string "general"
+method return sender=:1.4 -> dest=:1.19 reply_serial=497
+   string "general"
+method return sender=:1.4 -> dest=:1.35 reply_serial=72
+   string "general"
+method return sender=:1.4 -> dest=:1.39 reply_serial=54
+   string "general"
+method call sender=:1.282 -> dest=com.nokia.profiled serial=47 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "touchscreen.vibration.level"
+method call sender=:1.46 -> dest=com.nokia.profiled serial=66 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "touchscreen.vibration.level"
+method call sender=:1.37 -> dest=com.nokia.profiled serial=97 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "touchscreen.vibration.level"
+method call sender=:1.141 -> dest=com.nokia.profiled serial=74 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "touchscreen.vibration.level"
+method call sender=:1.35 -> dest=com.nokia.profiled serial=73 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "touchscreen.vibration.level"
+method return sender=:1.4 -> dest=:1.282 reply_serial=47
+   string "1"
+method return sender=:1.4 -> dest=:1.46 reply_serial=66
+   string "1"
+method return sender=:1.4 -> dest=:1.37 reply_serial=97
+   string "1"
+method call sender=:1.39 -> dest=com.nokia.profiled serial=55 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "touchscreen.vibration.level"
+method call sender=:1.19 -> dest=com.nokia.profiled serial=498 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "vibrating.alert.enabled"
+method return sender=:1.4 -> dest=:1.141 reply_serial=74
+   string "1"
+method return sender=:1.4 -> dest=:1.35 reply_serial=73
+   string "1"
+method return sender=:1.4 -> dest=:1.39 reply_serial=55
+   string "1"
+method return sender=:1.4 -> dest=:1.19 reply_serial=498
+   string "On"
+signal sender=:1.34 -> dest=(null destination) serial=55 path=/com/jolla/ambienced; interface=com.jolla.ambienced; member=contentChanged
+   int32 0
+signal sender=:1.34 -> dest=(null destination) serial=56 path=/com/jolla/ambienced; interface=com.jolla.ambienced; member=contentChanged
+   int32 1
+signal sender=:1.34 -> dest=(null destination) serial=57 path=/com/jolla/ambienced; interface=com.jolla.ambienced; member=contentChanged
+   int32 2
+method call sender=:1.19 -> dest=com.nokia.profiled serial=499 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method return sender=:1.4 -> dest=:1.19 reply_serial=499
+   string "general"
+method call sender=:1.19 -> dest=com.nokia.profiled serial=500 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "touchscreen.vibration.level"
+method return sender=:1.4 -> dest=:1.19 reply_serial=500
+   string "1"
+method call sender=:1.253 -> dest=com.nokia.profiled serial=101 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method return sender=:1.4 -> dest=:1.253 reply_serial=101
+   string "general"
+method call sender=:1.253 -> dest=com.nokia.profiled serial=102 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "vibrating.alert.enabled"
+method return sender=:1.4 -> dest=:1.253 reply_serial=102
+   string "On"
+method call sender=:1.253 -> dest=com.nokia.profiled serial=103 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_profile
+method return sender=:1.4 -> dest=:1.253 reply_serial=103
+   string "general"
+method call sender=:1.253 -> dest=com.nokia.profiled serial=104 path=/com/nokia/profiled; interface=com.nokia.profiled; member=get_value
+   string "general"
+   string "touchscreen.vibration.level"
+method return sender=:1.4 -> dest=:1.253 reply_serial=104
+   string "1"
+method call sender=:1.253 -> dest=com.jolla.ambienced serial=105 path=/com/jolla/ambienced; interface=com.jolla.ambienced; member=saveAttributes
+   int32 1
+   int64 31
+   array [
+      dict entry(
+         string "displayName"
+         variant             string "Test2"
+      )
+      dict entry(
+         string "favorite"
+         variant             boolean true
+      )
+      dict entry(
+         string "highlightColor"
+         variant             string "#ff81ffe8"
+      )
+      dict entry(
+         string "secondaryHighlightColor"
+         variant             string "#ff67ccba"
+      )
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=409 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_pixel_ratio'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=410 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_rounds'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=411 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_rounds'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=412 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_radius'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=413 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_radius'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=414 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_sigma'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=415 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_bg_blur_sigma'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=416 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/sailfish/silica/theme_pixel_ratio'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=417 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/meego/background/portrait/picture_filename'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=418 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6d 65 65 67 6f 2f 62 61 63 6b 67 72 6f 75 6e
+      64 2f 70 6f 72 74 72 61 69 74 2f 70 69 63 74 75 72 65 5f 66 69 6c 65 6e
+      61 6d 65 00 00 00 00 00 2f 68 6f 6d 65 2f 6e 65 6d 6f 2f 2e 6c 6f 63 61
+      6c 2f 73 68 61 72 65 2f 61 6d 62 69 65 6e 63 65 64 2f 77 61 6c 6c 70 61
+      70 65 72 73 2f 39 61 64 37 66 39 36 32 64 64 39 64 34 36 38 38 39 66 32
+      35 33 38 38 37 39 66 32 36 35 31 62 65 68 70 2e 6a 70 67 00 00 73 00 34
+      90
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=419 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/background/portrait/home_picture_filename'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=420 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 62 61 63 6b 67 72 6f 75 6e
+      64 2f 70 6f 72 74 72 61 69 74 2f 68 6f 6d 65 5f 70 69 63 74 75 72 65 5f
+      66 69 6c 65 6e 61 6d 65 00 00 00 00 00 00 00 00 2f 68 6f 6d 65 2f 6e 65
+      6d 6f 2f 2e 6c 6f 63 61 6c 2f 73 68 61 72 65 2f 61 6d 62 69 65 6e 63 65
+      64 2f 77 61 6c 6c 70 61 70 65 72 73 2f 39 61 64 37 66 39 36 32 64 64 39
+      64 34 36 38 38 39 66 32 35 33 38 38 37 39 66 32 36 35 31 62 65 68 70 2e
+      6a 70 67 00 00 73 00 39 98
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=421 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/background/portrait/app_picture_filename'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=422 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 62 61 63 6b 67 72 6f 75 6e
+      64 2f 70 6f 72 74 72 61 69 74 2f 61 70 70 5f 70 69 63 74 75 72 65 5f 66
+      69 6c 65 6e 61 6d 65 00 2f 68 6f 6d 65 2f 6e 65 6d 6f 2f 2e 63 61 63 68
+      65 2f 61 6d 62 69 65 6e 63 65 64 2f 63 6f 6d 2f 6a 6f 6c 6c 61 2f 63 6f
+      6d 70 6f 6e 65 6e 74 73 2f 62 67 69 6d 61 67 65 73 2f 39 31 66 65 64 62
+      65 61 70 2e 6a 70 67 00 00 73 00 38 84
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=423 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/highlight'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=424 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 74 68 65 6d 65 2f 63 6f 6c
+      6f 72 2f 68 69 67 68 6c 69 67 68 74 00 00 00 00 23 66 66 38 31 66 66 65
+      38 00 00 73 00 25 36
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=425 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/secondaryHighlight'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=426 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 74 68 65 6d 65 2f 63 6f 6c
+      6f 72 2f 73 65 63 6f 6e 64 61 72 79 48 69 67 68 6c 69 67 68 74 00 00 00
+      23 66 66 36 37 63 63 62 61 00 00 73 00 2e 3e
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=427 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/primary'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=428 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 74 68 65 6d 65 2f 63 6f 6c
+      6f 72 2f 70 72 69 6d 61 72 79 00 00 00 00 00 00 23 66 66 66 66 66 66 66
+      66 00 00 73 00 23 36
+   ]
+method return sender=:1.21 -> dest=:1.32 reply_serial=418
+   string ":1.21:user:150"
+signal sender=:1.21 -> dest=(null destination) serial=304 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/meego/background/portrait/picture_filename"
+   array [
+      string ""
+   ]
+   string ":1.21:user:150"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=429 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/secondary'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=430 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 74 68 65 6d 65 2f 63 6f 6c
+      6f 72 2f 73 65 63 6f 6e 64 61 72 79 00 00 00 00 23 62 30 66 66 66 66 66
+      66 00 00 73 00 25 36
+   ]
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=431 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/secondary'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=432 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/primary'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=433 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/secondaryHighlight'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=434 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/color/highlight'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=435 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/active_ambience'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=436 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6a 6f 6c 6c 61 2f 74 68 65 6d 65 2f 61 63 74
+      69 76 65 5f 61 6d 62 69 65 6e 63 65 00 00 00 00 2f 68 6f 6d 65 2f 6e 65
+      6d 6f 2f 2e 6c 6f 63 61 6c 2f 73 68 61 72 65 2f 61 6d 62 69 65 6e 63 65
+      64 2f 77 61 6c 6c 70 61 70 65 72 73 2f 39 61 64 37 66 39 36 32 64 64 39
+      64 34 36 38 38 39 66 32 35 33 38 38 37 39 66 32 36 35 31 62 65 68 70 2e
+      6a 70 67 00 00 73 00 25 80
+   ]
+method return sender=:1.21 -> dest=:1.32 reply_serial=420
+   string ":1.21:user:151"
+signal sender=:1.21 -> dest=(null destination) serial=306 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/background/portrait/home_picture_filename"
+   array [
+      string ""
+   ]
+   string ":1.21:user:151"
+method call sender=:1.30 -> dest=com.nokia.profiled serial=25 path=/com/nokia/profiled; interface=com.nokia.profiled; member=set_profile
+   string "general"
+method return sender=:1.4 -> dest=:1.30 reply_serial=25
+   boolean true
+method return sender=:1.21 -> dest=:1.32 reply_serial=422
+   string ":1.21:user:152"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=437 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=AddMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/lipstick-jolla-home/partnerspace/ambience'"
+method call sender=:1.32 -> dest=ca.desrt.dconf serial=438 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Change
+   array of bytes [
+      2f 64 65 73 6b 74 6f 70 2f 6c 69 70 73 74 69 63 6b 2d 6a 6f 6c 6c 61 2d
+      68 6f 6d 65 2f 70 61 72 74 6e 65 72 73 70 61 63 65 2f 61 6d 62 69 65 6e
+      63 65 00 00 00 00 00 00 00 00 73 00 33 3d
+   ]
+signal sender=:1.21 -> dest=(null destination) serial=308 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/background/portrait/app_picture_filename"
+   array [
+      string ""
+   ]
+   string ":1.21:user:152"
+method return sender=:1.21 -> dest=:1.32 reply_serial=424
+   string ":1.21:user:153"
+signal sender=:1.21 -> dest=(null destination) serial=310 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/theme/color/highlight"
+   array [
+      string ""
+   ]
+   string ":1.21:user:153"
+method return sender=:1.21 -> dest=:1.32 reply_serial=426
+   string ":1.21:user:154"
+signal sender=:1.21 -> dest=(null destination) serial=312 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/theme/color/secondaryHighlight"
+   array [
+      string ""
+   ]
+   string ":1.21:user:154"
+method return sender=:1.21 -> dest=:1.32 reply_serial=428
+   string ":1.21:user:155"
+signal sender=:1.21 -> dest=(null destination) serial=314 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/theme/color/primary"
+   array [
+      string ""
+   ]
+   string ":1.21:user:155"
+method return sender=:1.21 -> dest=:1.32 reply_serial=430
+   string ":1.21:user:156"
+signal sender=:1.21 -> dest=(null destination) serial=316 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/theme/color/secondary"
+   array [
+      string ""
+   ]
+   string ":1.21:user:156"
+method return sender=:1.21 -> dest=:1.32 reply_serial=436
+   string ":1.21:user:157"
+signal sender=:1.21 -> dest=(null destination) serial=318 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/jolla/theme/active_ambience"
+   array [
+      string ""
+   ]
+   string ":1.21:user:157"
+method return sender=:1.21 -> dest=:1.32 reply_serial=438
+   string ":1.21:user:158"
+signal sender=:1.21 -> dest=(null destination) serial=320 path=/ca/desrt/dconf/Writer/user; interface=ca.desrt.dconf.Writer; member=Notify
+   string "/desktop/lipstick-jolla-home/partnerspace/ambience"
+   array [
+      string ""
+   ]
+   string ":1.21:user:158"
+method return sender=:1.34 -> dest=:1.253 reply_serial=105
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=439 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/lipstick-jolla-home/partnerspace/ambience'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=440 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/theme/active_ambience'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=441 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/background/portrait/app_picture_filename'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=442 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/jolla/background/portrait/home_picture_filename'"
+method call sender=:1.32 -> dest=org.freedesktop.DBus serial=443 path=/org/freedesktop/DBus; interface=org.freedesktop.DBus; member=RemoveMatch
+   string "type='signal',interface='ca.desrt.dconf.Writer',path='/ca/desrt/dconf/Writer/user',arg0path='/desktop/meego/background/portrait/picture_filename'"
+signal sender=:1.34 -> dest=(null destination) serial=59 path=/com/jolla/ambienced; interface=com.jolla.ambienced; member=contentChanged
+   int32 1

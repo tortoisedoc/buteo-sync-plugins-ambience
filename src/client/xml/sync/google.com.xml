@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<profile name="google.com" type="sync" >
+<!--
+Definitions for the client plugin profile. All the client plugin definitions are
+in the form of key/value pairs. These key/value pairs are used by the buteo
+sync framework. You can also add your own key/value pairs that you can use
+in the plugin. The key/value pairs are accessible  via the 'iProfile' object,
+like:
+    QMap<QString, QString> properties = iProfile->allNonStorageKeys ();
+
+Depending on your needs, change the following default settings
+-->
+    <key name="Remote database" value="https://myservice.com/sync" />
+    <key name="Username" value="myusername" />
+    <key name="Password" value="mypassword" />
+    <key name="destinationtype" value="online"/>
+    <key name="displayname" value="MyServiceSync"/>
+    <key name="enabled" value="true" />
+    <key name="use_accounts" value="false" />
+    <key name="hidden" value="true" />
+
+<!--
+The following settings are for the protocol. But these can also be set
+in CalDavPlugin.xml file
+-->
+    <profile name="atom" type="client" >
+        <key name="Sync Transport" value="HTTP" />
+        <key name="Sync Direction" value="one-way" />
+        <key name="conflictpolicy" value="server-wins" />
+        <key name="key1" value="value1" />
+        <key name="key2" value="value2" />
+        <key name="key3" value="value3" />
+    </profile>
+
+<!-- The following are the storage plugins that this plugin supports.
+If you do not use a storage plug-in, then you do not need to have the
+following definitions.
+These are just samples and you can have your own storage plugins
+-->
+    <profile name="contacts" type="storage" >
+        <key name="enabled" value="true" />
+        <key name="Local URI" value="./contacts" />
+        <key name="Target URI" value="contacts" />
+    </profile>
+    <profile name="calendar" type="storage" >
+        <key name="enabled" value="true" />
+        <key name="Notebook Name" value="Personal" />
+        <key name="Local URI" value="./calendar" />
+        <key name="Target URI" value="caltask" />
+        <key name="Calendar Format" value="vcalendar" />
+    </profile>
+    <profile name="xyz" type="storage" >
+        <key name="enabled" value="false" />
+        <key name="Local DBName" value="XYZ" />
+    </profile>
+    
+<!-- Add any extra key/value pairs that your plugin might need. These
+properties are not used by the framework and only your plugin can make
+use of them. These key/values should not conflict with the ones that 
+the framework uses -->
+
+    <key name="mykey1" value="myvalue1" />
+    <key name="mykey2" value="myvalue2" />
+
+</profile>
+

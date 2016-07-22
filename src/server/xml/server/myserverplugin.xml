@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<profile name="myserverplugin" type="server" >
+    <key name="usb_transport" value="true"/>
+    
+    <key name="enabled" value="true" />
+    
+    <key name="hidden" value="true" />
+
+<!-- The following are the storage plugins that this plugin supports.
+If you do not use a storage plug-in, then you do not need to have the
+following definitions.
+These are just samples and you can have your own storage plugins
+-->
+    <profile name="contacts" type="storage" >
+        <key name="enabled" value="true" />
+        <key name="Local URI" value="./contacts" />
+        <key name="Target URI" value="contacts" />
+    </profile>
+    <profile name="calendar" type="storage" >
+        <key name="enabled" value="true" />
+        <key name="Notebook Name" value="Personal" />
+        <key name="Local URI" value="./calendar" />
+        <key name="Target URI" value="caltask" />
+        <key name="Calendar Format" value="vcalendar" />
+    </profile>
+    <profile name="xyz" type="storage" >
+        <key name="enabled" value="false" />
+        <key name="Local DBName" value="XYZ" />
+    </profile>
+    
+<!-- Add any extra key/value pairs that your plugin might need. These
+properties are not used by the framework and only your plugin can make
+use of them. These key/values should not conflict with the ones that 
+the framework uses -->
+    <key name="mykey1" value="myvalue1" />
+    <key name="mykey2" value="myvalue2" />
+
+</profile>
+

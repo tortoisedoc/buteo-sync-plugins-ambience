@@ -1,0 +1,409 @@
+/*
+* YOUR LICENSE TEXT HERE
+*/
+#include "MyServerPlugin.h"
+#include <LogMacros.h>
+
+#include <buteosyncfw5/SyncProfile.h>
+#include <buteosyncfw5/PluginCbInterface.h>
+
+extern "C" MyServerPlugin* createPlugin(const QString& pluginName,
+        const Buteo::SyncProfile& profile,
+        Buteo::PluginCbInterface *cbInterface) {
+    return new MyServerPlugin(pluginName, profile, cbInterface);
+}
+
+extern "C" void destroyPlugin(MyServerPlugin *server) {
+    delete server;
+}
+
+MyServerPlugin::MyServerPlugin (const QString& pluginName,
+                                          const Buteo::Profile profile,
+                                          Buteo::PluginCbInterface *cbInterface) :
+    ServerPlugin (pluginName, profile, cbInterface), mAgent (0), mConfig (0),
+    mTransport (0), mCommittedItems (0), mConnectionType (Sync::CONNECTIVITY_USB)
+{
+    FUNCTION_CALL_TRACE;
+}
+
+MyServerPlugin::~MyServerPlugin ()
+{
+    FUNCTION_CALL_TRACE;
+
+    closeSyncAgentConfig ();
+    closeSyncAgent ();
+}
+
+bool
+MyServerPlugin::init ()
+{
+    FUNCTION_CALL_TRACE;
+
+    return true;
+}
+
+bool
+MyServerPlugin::uninit ()
+{
+    FUNCTION_CALL_TRACE;
+
+    closeSyncAgentConfig ();
+    closeSyncAgent ();
+
+    return true;
+}
+
+void
+MyServerPlugin::abortSync (Sync::SyncStatus status)
+{
+    FUNCTION_CALL_TRACE;
+
+    MyProtocol::SyncState state = MyProtocol::ABORTED;
+
+    if (status == Sync::SYNC_ERROR)
+        state = MyProtocol::CONNECTION_ERROR;
+
+    if (mAgent && mAgent->abort (state))
+    {
+        LOG_DEBUG ("Signaling SyncML agent abort");
+    } else
+    {
+        handleSyncFinished (MyProtocol::ABORTED);
+    }
+}
+
+bool
+MyServerPlugin::cleanUp ()
+{
+    FUNCTION_CALL_TRACE;
+
+    // Perform necessary cleanup
+    return true;
+}
+
+Buteo::SyncResults
+MyServerPlugin::getSyncResults () const
+{
+    return mResults;
+}
+
+bool
+MyServerPlugin::startListen ()
+{
+    FUNCTION_CALL_TRACE;
+
+    LOG_DEBUG ("Starting listener");
+
+    bool listening = false;
+    if (iCbInterface->isConnectivityAvailable (Sync::CONNECTIVITY_USB))
+    {
+        // Start listening over USB
+    } else if (iCbInterface->isConnectivityAvailable (Sync::CONNECTIVITY_BT))
+    {
+        // Start listning over BT
+    } else
+    {
+        mConnectionType = Sync::CONNECTIVITY_INTERNET;
+        // Start listening over IP
+    }
+
+    return listening;
+}
+
+void
+MyServerPlugin::stopListen ()
+{
+    FUNCTION_CALL_TRACE;
+
+    // Stop all connections
+}
+
+void
+MyServerPlugin::suspend ()
+{
+    FUNCTION_CALL_TRACE;
+
+    // implementing suspend
+}
+
+void
+MyServerPlugin::resume ()
+{
+    FUNCTION_CALL_TRACE;
+
+    // implementing suspend
+}
+
+void
+MyServerPlugin::connectivityStateChanged (Sync::ConnectivityType type, bool state)
+{
+    FUNCTION_CALL_TRACE;
+
+    LOG_DEBUG ("Connectivity state changed event " << type << ". Connectivity changed to " << state);
+
+    if (type == Sync::CONNECTIVITY_USB)
+    {
+        // Only connectivity changes would be USB enabled/disabled
+        // Handle USB connectivity state changes
+    }
+    } else if (type == Sync::CONNECTIVITY_BT)
+    {
+        // Handle BT connectivity state changes
+    } else if (type == Sync::CONNECTIVITY_INTERNET)
+    {
+        // Handle IP connectivity state changes
+    }
+}
+
+bool
+MyServerPlugin::initSyncAgent ()
+{
+    FUNCTION_CALL_TRACE;
+
+    LOG_DEBUG ("Creating SyncML agent...");
+
+    mAgent = new MyProtocol::SyncAgent ();
+    return true;
+}
+
+void
+MyServerPlugin::closeSyncAgent ()
+{
+    delete mAgent;
+    mAgent = 0;
+}
+
+MyProtocol::SyncAgentConfig*
+MyServerPlugin::initSyncAgentConfig ()
+{
+    FUNCTION_CALL_TRACE;
+
+    // Initialize transport
+    mTransport = new MyProtocol::init();
+
+    if (!mTransport)
+        return 0;
+
+    // Initialize any protocol stack configuration
+    mConfig = new MyProtocol::SyncAgentConfig ();
+
+    // Set the transport used for the configuration
+    mConfig->setTransport (mTransport);
+
+    return mConfig;
+}
+
+void
+MyServerPlugin::closeSyncAgentConfig ()
+{
+    FUNCTION_CALL_TRACE;
+
+    LOG_DEBUG ("Closing config...");
+
+    delete mConfig;
+    mConfig = 0;
+
+}
+
+bool
+MyServerPlugin::startNewSession ()
+{
+    FUNCTION_CALL_TRACE;
+
+    if (!initSyncAgent () || !initSyncAgentConfig ())
+        return false;
+
+    QObject::connect (mAgent, SIGNAL (stateChanged (MyProtocol::SyncState)),
+             this, SLOT (handleStateChanged (MyProtocol::SyncState)));
+    QObject::connect (mAgent, SIGNAL (syncFinished (MyProtocol::SyncState)),
+             this, SLOT (handleSyncFinished (MyProtocol::SyncState)));
+    QObject::connect (mAgent, SIGNAL (storageAccquired (QString)),
+             this, SLOT (handleStorageAccquired (QString)));
+    QObject::connect (mAgent, SIGNAL (itemProcessed (MyProtocol::ModificationType, MyProtocol::ModifiedDatabase, QString, QString, int)),
+             this, SLOT (handleItemProcessed (MyProtocol::ModificationType, MyProtocol::ModifiedDatabase, QString, QString, int)));
+
+    // Let the agent start listening for incoming connections
+    if (mAgent->listen (*mConfig))
+    {
+        LOG_DEBUG ("New session started");
+        return true;
+    } else
+    {
+        return false;
+    }
+}
+
+void
+MyServerPlugin::handleStateChanged (MyProtocol::SyncState state)
+{
+    FUNCTION_CALL_TRACE;
+
+    LOG_DEBUG ("State changed. New state " << state);
+}
+
+void
+MyServerPlugin::handleSyncFinished (MyProtocol::SyncState state)
+{
+    FUNCTION_CALL_TRACE;
+
+    LOG_DEBUG ("Sync finished with state " << state);
+    bool errorStatus = true;
+
+    switch (state)
+    {
+    case MyProtocol::SUSPENDED:
+    case MyProtocol::ABORTED:
+    case MyProtocol::SYNC_FINISHED:
+    {
+        generateResults (true);
+        errorStatus = true;
+        emit success (getProfileName (), QString::number (state));
+        break;
+    }
+
+    case MyProtocol::INTERNAL_ERROR:
+    case MyProtocol::DATABASE_FAILURE:
+    case MyProtocol::CONNECTION_ERROR:
+    case MyProtocol::INVALID_SYNCML_MESSAGE:
+    {
+        generateResults (false);
+        emit error (getProfileName (), QString::number (state), 0);
+        break;
+    }
+
+    default:
+    {
+        LOG_CRITICAL ("Unexpected state change");
+        generateResults (false);
+
+        emit error (getProfileName (), QString::number (state), 0);
+        break;
+    }
+    }
+
+    uninit ();
+}
+
+void
+MyServerPlugin::handleItemProcessed (MyProtocol::ModificationType modificationType,
+                                   MyProtocol::ModifiedDatabase modifiedDb,
+                                   QString localDb,
+                                   QString dbType,
+                                   int committedItems)
+{
+    FUNCTION_CALL_TRACE;
+
+    LOG_DEBUG ("Modification type:" << modificationType);
+    LOG_DEBUG ("ModificationType database:" << modifiedDb);
+    LOG_DEBUG ("Local database:" << localDb);
+    LOG_DEBUG ("Database type:" << dbType);
+    LOG_DEBUG ("Committed items:" << committedItems);
+
+    mCommittedItems++;
+
+    if (!receivedItems.contains (localDb))
+    {
+        ReceivedItemDetails details;
+        details.added = details.modified = details.deleted = details.error = 0;
+        details.mime = dbType;
+        receivedItems[localDb] = details;
+    }
+
+    switch (modificationType)
+    {
+    case MyProtocol::MOD_ITEM_ADDED:
+    {
+        ++receivedItems[localDb].added;
+        break;
+    }
+    case MyProtocol::MOD_ITEM_MODIFIED:
+    {
+        ++receivedItems[localDb].modified;
+        break;
+    }
+    case MyProtocol::MOD_ITEM_DELETED:
+    {
+        ++receivedItems[localDb].deleted;
+        break;
+    }
+    case MyProtocol::MOD_ITEM_ERROR:
+    {
+        ++receivedItems[localDb].error;
+        break;
+    }
+    default:
+    {
+        Q_ASSERT (0);
+        break;
+    }
+    }
+
+    Sync::TransferDatabase db = Sync::LOCAL_DATABASE;
+    if (modifiedDb == MyProtocol::MOD_LOCAL_DATABASE)
+        db = Sync::LOCAL_DATABASE;
+    else
+        db = Sync::REMOTE_DATABASE;
+
+    if (mCommittedItems == committedItems)
+    {
+        QMapIterator<QString, ReceivedItemDetails> itr (receivedItems);
+        while (itr.hasNext ())
+        {
+            itr.next ();
+            if (itr.value ().added)
+                emit transferProgress (getProfileName (), db, Sync::ITEM_ADDED, itr.value ().mime, itr.value ().added);
+            if (itr.value ().modified)
+                emit transferProgress (getProfileName (), db, Sync::ITEM_MODIFIED, itr.value ().mime, itr.value ().modified);
+            if (itr.value ().deleted)
+                emit transferProgress (getProfileName (), db, Sync::ITEM_DELETED, itr.value ().mime, itr.value ().deleted);
+            if (itr.value ().error)
+                emit transferProgress (getProfileName (), db, Sync::ITEM_ERROR, itr.value ().mime, itr.value ().error);
+        }
+
+        mCommittedItems = 0;
+        receivedItems.clear ();
+    }
+}
+
+void
+MyServerPlugin::generateResults (bool success)
+{
+    FUNCTION_CALL_TRACE;
+
+    mResults.setMajorCode (success ? Buteo::SyncResults::SYNC_RESULT_SUCCESS : Buteo::SyncResults::SYNC_RESULT_FAILED);
+
+    mResults.setTargetId (mAgent->getResults().getRemoteDeviceId ());
+    const QMap<QString, MyProtocol::DatabaseResults>* dbResults = mAgent->getResults ().getDatabaseResults ();
+
+    if (dbResults->isEmpty ())
+    {
+        LOG_DEBUG("No items transferred");
+    }
+    else
+    {
+        QMapIterator<QString, MyProtocol::DatabaseResults> itr (*dbResults);
+        while (itr.hasNext ())
+        {
+            itr.next ();
+            const MyProtocol::DatabaseResults& r = itr.value ();
+            Buteo::TargetResults targetResults(
+                    itr.key(), // Target name
+                    Buteo::ItemCounts (r.iLocalItemsAdded,
+                                       r.iLocalItemsDeleted,
+                                       r.iLocalItemsModified),
+                    Buteo::ItemCounts (r.iRemoteItemsAdded,
+                                       r.iRemoteItemsDeleted,
+                                       r.iRemoteItemsModified));
+            mResults.addTargetResults (targetResults);
+
+            LOG_DEBUG("Items for" << targetResults.targetName () << ":");
+            LOG_DEBUG("LA:" << targetResults.localItems ().added <<
+                      "LD:" << targetResults.localItems ().deleted <<
+                      "LM:" << targetResults.localItems ().modified <<
+                      "RA:" << targetResults.remoteItems ().added <<
+                      "RD:" << targetResults.remoteItems ().deleted <<
+                      "RM:" << targetResults.remoteItems ().modified);
+        }
+    }
+}
+
